@@ -25,6 +25,10 @@ const Title = styled.div`
 
     font-weight: 700;
     font-size: 1.2rem;
+
+    @media only screen and (max-width: 600px) {
+        width: 30%;
+    }
 `
 
 export default SectionTitle;

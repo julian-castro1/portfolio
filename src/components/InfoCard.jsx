@@ -14,12 +14,12 @@ function InfoCard({theme='', title='', subtitle='', mainContent='', secondConten
 
     return (
         <CardContainer theme={theme}>
-            <InfoContainer theme={theme}>
-                <TextContainer theme={theme}>
-                    <TitleContainer theme={theme}>
+            <TitleContainer theme={theme}>
                         <Title onClick={handleRedirect} link={link} theme={theme}>{title}</Title>
                         <Subtitle theme={theme}>{subtitle}</Subtitle>
-                    </TitleContainer>
+            </TitleContainer>
+            <InfoContainer theme={theme}>
+                <TextContainer theme={theme}>
                     <MainContent theme={theme}>
                         {mainContentParagraphs.map((para)=>{
                             let nextIsBegin = true;
@@ -53,6 +53,10 @@ const MediaContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 600px) {
+        order: 1; /* Show text container second on smaller screens */
+    }
 `
 const BoldWord = styled.span`
     font-weight: 700;
@@ -68,6 +72,11 @@ const CardContainer = styled.div`
     padding: 1rem 2rem 1rem 2rem;
 
     border-radius: 2rem;
+
+    @media only screen and (max-width: 600px) {
+        margin: .5rem;
+        padding: 1rem 1.7rem 1rem 1.7rem;
+    }
 `
 const InfoContainer = styled.div`
     display: flex;
@@ -79,6 +88,11 @@ const InfoContainer = styled.div`
     margin-top: .4rem;
 
     gap: 1rem;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        margin: 0rem;
+    }
 `
 const TextContainer = styled.div`
     display: flex;
@@ -87,6 +101,10 @@ const TextContainer = styled.div`
     /* justify-content: space-evenly; */
 
     gap: .5rem;
+     @media only screen and (max-width: 600px) {
+        order: 2; /* Show text container second on smaller screens */
+    }
+
 `
 const TitleContainer = styled.div`
     display: flex;
@@ -94,6 +112,10 @@ const TitleContainer = styled.div`
     align-items: center;
 
     gap:2vw;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
 `
 const Title = styled.div`
     color: ${props=>props.theme.primary};
@@ -102,6 +124,9 @@ const Title = styled.div`
 
     &:hover{
         cursor: ${props=>props.link == 'null' ? "auto" : "pointer"};
+    }
+    @media only screen and (max-width: 600px) {
+        font-size: 3rem;
     }
 `
 const Subtitle = styled.div`

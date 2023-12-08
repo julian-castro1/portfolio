@@ -78,7 +78,8 @@ const IntroText = styled.div`
 
     padding: 1rem 3rem 1.4rem 3rem;
     border-radius: 2rem;
-    min-width: 26rem;
+    min-width: min(26rem, 40vw);
+    
     background-color: ${props=>props.theme.back3};
 
     margin-top: 0vh;
@@ -105,7 +106,7 @@ const IntroImage = styled.img`
     margin: 0;
     padding: 0; */
 
-    max-width: 20rem;
+    max-width: min(20rem, 40vw);
     max-height: 100%;
 `
 

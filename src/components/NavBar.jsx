@@ -53,6 +53,8 @@ const NavContainer = styled.div`
     top: 0;
     z-index: 30;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+
+    overflow-x: scroll;
 `
 const NavOption = styled.div`
     display: flex;

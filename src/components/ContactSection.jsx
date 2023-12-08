@@ -81,6 +81,10 @@ const DownloadResume = styled.div`
 const LogoImg = styled.img`
     width: 5vw;
     /* height: 10vh; */
+
+    @media only screen and (max-width: 600px) {
+        width: 50%;
+    }
 `
 const SocialsLinks = styled.div`
     display: flex;
@@ -132,12 +136,21 @@ const CardContainer = styled.div`
     padding: 1rem 2rem 1rem 2rem;
 
     border-radius: 2rem;
+
+    @media only screen and (max-width: 600px) {
+        /* margin: 0; */
+    }
 `
 const InfoContainer = styled.div`
     display: flex;
     flex-direction: row;
 
     gap: 1rem;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        /* width: 100%; */
+    }
 `
 const TextContainer = styled.div`
     display: flex;
@@ -168,6 +181,10 @@ const MainContent = styled.div`
     font-weight: 300;
     font-size: 1.4rem;
 
+    @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+    }
+
     flex-grow: 1;
 `
 
@@ -189,6 +206,13 @@ const LinksContainer = styled.div`
     margin-left: auto;
 
     gap: 1rem;
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+
+    }
 `
 
 
