@@ -27,11 +27,11 @@ function ContactSection({theme}){
                         <MainContent theme={theme}>
                             <p>
                                 <BoldWord>LinkedIn: </BoldWord>
-                                <span>https://www.linkedin.com/in/julian-castro1/</span>
+                                <span  onClick={linkedLink}>https://www.linkedin.com/in/julian-castro1/</span>
                             </p>
                             <p>
                                 <BoldWord>GitHub: </BoldWord>
-                                <span>https://github.com/julian-castro1</span>
+                                <span onClick={gitLink}>https://github.com/julian-castro1</span>
                             </p>
                             <p>
                                 <BoldWord>Email: </BoldWord>
