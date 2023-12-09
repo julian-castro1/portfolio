@@ -31,6 +31,7 @@ function NavBar({theme, selected}){
                 
                 )
             })}
+            <MobileSpacer></MobileSpacer>
         </NavContainer>
     )
 }
@@ -54,7 +55,12 @@ const NavContainer = styled.div`
     z-index: 30;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
 
-    overflow-x: scroll;
+    
+
+    @media only screen and (max-width: 600px) {
+        padding-left: 1rem;
+        overflow-x: scroll;
+    }
 `
 const NavOption = styled.div`
     display: flex;
@@ -66,8 +72,19 @@ const NavOption = styled.div`
     border-radius: .5rem;
     color: ${props=> props.selected == props.name.replace(/\s+/g, '-') ? props.theme.primaryText : props.theme.text};
 
+    white-space: nowrap;
+
     &:hover{
         cursor: pointer;
+    }
+`
+const MobileSpacer = styled.div`
+    height: 100%;
+    min-width: 0rem;
+
+    /* background-color: red; */
+    @media only screen and (max-width: 600px) {
+        min-width: 5rem;
     }
 `
 
