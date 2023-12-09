@@ -10,7 +10,7 @@ function BioSection({theme}){
     return (
        <BioContainer id="Bio">
             <SectionTitle theme={theme} title="Bio"></SectionTitle>
-            <InfoCard theme={theme} title="About me" subtitle={subtitle} mainContent={main} secondContent={secondary} img={julianIMG}/>
+            <InfoCard theme={theme} title="About me" subtitle={subtitle} mainContent={main} secondContent={secondary} img='null'/>
         </BioContainer>
     )
 }
