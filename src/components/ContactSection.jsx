@@ -27,19 +27,19 @@ function ContactSection({theme}){
                         <MainContent theme={theme}>
                             <p>
                                 <BoldWord>LinkedIn: </BoldWord>
-                                <span  onClick={linkedLink}>https://www.linkedin.com/in/julian-castro1/</span>
+                                <a  onClick={linkedLink}>https://www.linkedin.com/in/julian-castro1/</a>
                             </p>
                             <p>
                                 <BoldWord>GitHub: </BoldWord>
-                                <span onClick={gitLink}>https://github.com/julian-castro1</span>
+                                <a onClick={gitLink}>https://github.com/julian-castro1</a>
                             </p>
                             <p>
                                 <BoldWord>Email: </BoldWord>
-                                <span>julian_castro1@icloud.com</span>
+                                <a>julian_castro1@icloud.com</a>
                             </p>
                             <p>
                                 <BoldWord>Phone: </BoldWord>
-                                <span>(832)-692-6367</span>
+                                <a>(832)-692-6367</a>
                             </p>
                         </MainContent>
                     </TextContainer>
